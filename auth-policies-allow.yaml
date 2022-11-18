@@ -22,10 +22,10 @@ spec:
     - from:
         - source:
               principals:
-              - cluster.local/ns/ingress-nginx/sa/ingress-nginx  
+              - cluster.local/ns/nginx/sa/nginx-ingress-ingress-nginx 
         - source:
               principals:
-              - cluster.local/ns/simulator/sa/load     
+              - cluster.local/ns/bookinfo/sa/load     
       to:
         - operation:
             methods:
@@ -46,7 +46,7 @@ spec:
     - from:
         - source:
             namespaces:
-              - ingress-nginx
+              - nginx
       to:
         - operation:
             ports:
@@ -73,7 +73,7 @@ spec:
               - cluster.local/ns/bookinfo/sa/bookinfo-productpage
         - source:
               principals:
-              - cluster.local/ns/ingress-nginx/sa/ingress-nginx                
+              - cluster.local/ns/nginx/sa/nginx-ingress-ingress-nginx               
       to:
         - operation:
             hosts:
@@ -100,7 +100,7 @@ spec:
               - cluster.local/ns/bookinfo/sa/bookinfo-reviews
         - source:
               principals:
-              - cluster.local/ns/ingress-nginx/sa/ingress-nginx                
+              - cluster.local/ns/nginx/sa/nginx-ingress-ingress-nginx               
       to:
         - operation:
             hosts:
@@ -127,7 +127,7 @@ spec:
               - cluster.local/ns/bookinfo/sa/bookinfo-productpage
         - source:
               principals:
-              - cluster.local/ns/ingress-nginx/sa/ingress-nginx                
+              - cluster.local/ns/nginx/sa/nginx-ingress-ingress-nginx               
       to:
         - operation:
             hosts:
